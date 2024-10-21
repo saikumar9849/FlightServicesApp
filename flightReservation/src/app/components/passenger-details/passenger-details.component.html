@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Complete Details</title>
+    </head>
+    <body>
+        <h1>Complete Reservation</h1>
+        <h2>PassengerDetails</h2>
+        Airline: {{flightData.operatingAirlines}}<br/>
+        Departure City: {{flightData.departureCity}}<br/>
+        Arrival City: {{flightData.arrivalCity}}<br/>
+        Departure Date: {{flightData.departureDate}}<br/>
+        <br/>
+        <h2>Passenger Details:</h2>
+        <form #passengerdetails="ngForm" (ngSubmit)="onSubmit()">
+            FirstName:    <input type="text" name="passengerFirstName" [(ngModel)]="reservation.passengerFirstName"><br/>
+            MiddleName:   <input type="text" name="passengerMiddleName" [(ngModel)]="reservation.passengerMiddleName"><br/>
+            LastName:     <input type="text" name="passengerLastName" [(ngModel)]="reservation.passengerLastName"><br/>
+            Email:        <input type="text" name="passengerEmail" [(ngModel)]="reservation.passengerEmail"><br/>
+            Phone:        <input type="text" name="passengerPhone" [(ngModel)]="reservation.passengerPhone"><br/>
+            CardNumber:   <input type="text" name="cardNumber" [(ngModel)]="reservation.cardNumber"><br/>
+            ExpiryDate:   <input type="text" name="expirationDate" [(ngModel)]="reservation.expirationDate"><br/>
+            SecurityCode: <input type="text" name="securityCode" [(ngModel)]="reservation.securityCode"><br/>
+            <input type="submit">
+        </form>
+    </body>
+</html>

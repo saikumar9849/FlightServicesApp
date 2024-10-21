@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>FindFlights</title>
+    </head>
+    <body>
+        <h2>FindFlights</h2>
+        <form #findflights="ngForm" (ngSubmit)="onSubmit()">
+            From:<input type="text" name="from" [(ngModel)]="criteria.from">
+            To:<input type="text" name="to" [(ngModel)]="criteria.to">
+            DepartureDate:<input type="text" name="departureDate" [(ngModel)]="criteria.departureDate">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Displaying the Flights</title>
+    </head>
+    <body>
+        <h2>Flights</h2>
+        <table>
+            <tr>
+                <th>Operating Airlines</th>
+                <th>Departure City</th>
+                <th>Arrival City</th>
+                <th>Departure Date</th>
+            </tr>
+            <tr *ngFor="let flight of flights">
+                <td>{{flight.operatingAirlines}}</td>
+                <td>{{flight.departureCity}}</td>
+                <td>{{flight.arrivalCity}}</td>
+                <td>{{flight.departureDate}}</td>
+                <td><button (click)="onSelect(flight.id)">Select</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
